@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Anniversary 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe0eb, #fff0f5, #ffd6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 30px 15px;
+    color: #86445f;
+}
+
+/* Floating hearts */
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp 9s linear infinite;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+    font-size: 35px;
+}
+
+.hearts span:nth-child(3) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 75%;
+    animation-delay: 1s;
+    font-size: 30px;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+/* Main anniversary card */
+.container {
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.82);
+    padding: 38px 25px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 15px 45px rgba(202, 91, 132, 0.2);
+    position: relative;
+    z-index: 1;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.top-heart {
+    font-size: 55px;
+    margin-bottom: 12px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.subtitle {
+    color: #d66b91;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #c74678;
+    font-size: clamp(30px, 7vw, 43px);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.names {
+    font-size: 19px;
+    font-weight: 600;
+    color: #e27ba0;
+    margin: 12px 0;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #8d6477;
+    margin: 15px 0 24px;
+}
+
+/* Love letter */
+.letter {
+    background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+    border-radius: 22px;
+    padding: 24px 20px;
+    border: 1px dashed #e8a0ba;
+    margin: 20px 0;
+}
+
+.letter h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 23px;
+    color: #c74678;
+    margin-bottom: 12px;
+}
+
+.letter p {
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* Anniversary date */
+.date {
+    display: inline-block;
+    background: #fff;
+    color: #c74678;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #f5bfd1;
+    font-size: 13px;
+    margin: 10px 0 20px;
+}
+
+/* Cute button */
+button {
+    border: none;
+    background: linear-gradient(135deg, #ed83a7, #d94f82);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(217, 79, 130, 0.25);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(217, 79, 130, 0.35);
+}
+
+.hidden-message {
+    display: none;
+    margin-top: 22px;
+    padding: 18px;
+    background: white;
+    border-radius: 18px;
+    color: #c74678;
+    font-size: 14px;
+    line-height: 1.9;
+    animation: appear 0.7s ease;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #c47b98;
+}
+
+/* Mobile friendly */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 18px;
+        border-radius: 25px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .letter {
+        padding: 20px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span>💗</span>
+    <span>💕</span>
+    <span>💖</span>
+    <span>💗</span>
+    <span>💘</span>
+</div>
+
+<main class="container">
+
+    <div class="top-heart">💝</div>
+
+    <p class="subtitle">♡ OUR SPECIAL DAY ♡</p>
+
+    <h1>Happy Anniversary!</h1>
+
+    <p class="names"> Drixene ♡ Niña rose </p>
+
+    <p class="description">
+        Another beautiful chapter of our love story.
+        Every day with you is a gift, and every moment
+        together is a memory I will treasure forever. 🌷
+    </p>
+
+    <div class="date">
+        🌸 Our Special Date: October 28, 2026
+    </div>
+
+    <section class="letter">
+        <h2>My Love Letter 💌</h2>
+
+        <p>
+            To my favorite person,<br>
+            Thank you for making my world brighter,
+            my heart happier, and my days more meaningful.
+            No matter what life brings us, I hope we
+            continue choosing each other every day.
+            You will always have a special place in my heart. 💗
+        </p>
+
+        <br>
+
+        <p><strong>Forever and always,</strong></p>
+        <p>With all my love, ♡</p>
+    </section>
+
+    <button onclick="showMessage()">
+        Open My Heart 💌
+    </button>
+
+    <div class="hidden-message" id="loveMessage">
+        <h2>You're My Favorite Person! 💖</h2>
+<h2>Eyotttttt 💖</h2>
+        <p>
+            If I could choose again, I would still choose you.
+            Today, tomorrow, and in every lifetime. 🥹💕
+        </p>
+        <p style="font-size: 25px; margin-top: 10px;">
+            💗 💋 💗
+        </p>
+    </div>
+
+    <p class="footer">
+        Made with love, just for you ♡
+    </p>
+
+</main>
+
+<script>
+function showMessage() {
+    const message = document.getElementById("loveMessage");
+
+    if (message.style.display === "block") {
+        message.style.display = "none";
+    } else {
+        message.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
